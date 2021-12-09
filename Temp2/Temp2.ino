@@ -16,7 +16,7 @@ int humid;
 int light_sensor = A3;
 int value = 0;
 
-int tempMin = 17;
+int tempMin = 5;
 
 void setup() {
  Serial.begin(9600);
