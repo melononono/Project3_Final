@@ -55,20 +55,27 @@ void loop() {
   Oled.println();
   Oled.print(humid);
   Oled.println("% - Humidity");
+  Oled.println();
+  Oled.print(light);
+  Oled.println("% - Light");
   
 if (temp < tempMin){
   digitalWrite(LED, HIGH);
+  }
+else if (light < 60){
+digitalWrite(LED, HIGH);
   }
 else{
   digitalWrite(LED, LOW);
 }
 
-if (light < 40){
+
+/*if (light < 60){
 digitalWrite(LED, HIGH);
   }
 else {
 digitalWrite(LED, LOW);
-}
+}*/
 
 delay(1000);
 
